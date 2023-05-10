@@ -14,6 +14,7 @@ body{
 /*************************************************/
 .calculater{
     background-color: rgba(20, 20, 99, 0.7);
+    padding: 15px;
     display: flex;
     flex-direction: column;
 }
@@ -37,4 +38,13 @@ body{
     grid-template-rows: repeat(5, 50px);
     column-gap: 5px;
     grid-gap: 5px;
+}
+/*************************************************/
+button{
+    border: none;
+    outline: none;
+}
+/*************************************************/
+button:active{
+    transform: translateY(2px);
 }
