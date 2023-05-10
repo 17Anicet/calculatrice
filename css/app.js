@@ -30,5 +30,5 @@ const calcul = (values) =>{
     }
 }
 window.addEventListener('error', (e) =>{
-    alert('You have an erro, please');
+    alert('You have an erro, please' +e.message);
 })
