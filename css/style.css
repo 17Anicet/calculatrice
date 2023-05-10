@@ -1,3 +1,8 @@
+@font-face{
+    font-family: 'Sen-Regular';
+    src: url('Sen-Regular.ttf') format('truetype'); 
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -9,13 +14,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: gray;
+    font-family: 'Sen-Regular';
+    background-color: rgba(20, 20, 99, 0.7);
 }
 /*************************************************/
 .calculater{
-    background-color: rgba(20, 20, 99, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 15px;
     display: flex;
+    border-radius: 10px;
     flex-direction: column;
 }
 /*************************************************/
@@ -43,8 +50,21 @@ body{
 button{
     border: none;
     outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    font-family: 'Sen-Regular';
 }
 /*************************************************/
 button:active{
     transform: translateY(2px);
+}
+button[data-key="8"]{
+    color: white;
+    background-color: green;
+}
+button[data-key="13"]{
+    color: white;
+    grid-column: span 2;
+    font-size: 25px;
+    background-color: green;
 }
