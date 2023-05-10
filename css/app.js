@@ -3,12 +3,12 @@ const listkeycode = touches.map( touch=> touch.dataset.key);
 const screen = document.querySelector('.screen');
 
 addEventListener('keydown', (e) => {
-    const value = e.keyCode.toString();
+    const values = e.keyCode.toString();
     calcul(values)
 })
 
 addEventListener('click', (e) =>{
-    const value = e.target.dataset.key;
+    const values = e.target.dataset.key;
     calcul(values)
 })
 
@@ -20,7 +20,10 @@ const calcul = (values) =>{
                 break;
             case '13' :
                 const calculs = eval(screen.textContent);
-                screen.textContent = calculs;    
+                screen.textContent = calculs;
+                break;
+            default:
+                const indexKeyCode = listkeycode.indexOf(values);       
         }
     }
 }
